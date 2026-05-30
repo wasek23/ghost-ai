@@ -1,26 +1,60 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
+@layer base {
   :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
+    /* Background colors */
+    --bg-base: 0 0% 3.1%;
+    --bg-surface: 0 0% 6.7%;
+    --bg-elevated: 0 0% 11%;
+    --bg-subtle: 0 0% 14.1%;
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+    /* Border colors */
+    --border-default: 0 0% 16.5%;
+    --border-subtle: 0 0% 23.1%;
+
+    /* Text colors */
+    --text-primary: 0 0% 94.1%;
+    --text-secondary: 0 0% 75.3%;
+    --text-muted: 0 0% 50.2%;
+    --text-faint: 0 0% 31.4%;
+
+    /* Accent colors */
+    --accent-primary: 178 100% 39.2%;
+    --accent-primary-dim: rgba(0, 200, 212, 0.12);
+    --accent-ai: 260 100% 56.9%;
+    --accent-ai-text: 260 83% 70.2%;
+
+    /* State colors */
+    --state-error: 0 100% 59.8%;
+    --state-success: 145 76.5% 49.8%;
+    --state-warning: 37.7 100% 57.8%;
+
+    /* Fonts */
+    --font-geist-sans: "Geist", system-ui, -apple-system, sans-serif;
+    --font-geist-mono: "Geist Mono", monospace;
+
+    /* Border radius */
+    --radius-sm: 12px;
+    --radius-md: 16px;
+    --radius-lg: 20px;
+  }
+
+  html {
+    font-family: var(--font-geist-sans);
+  }
+
+  body {
+    background-color: hsl(var(--bg-base));
+    color: hsl(var(--text-primary));
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    color-scheme: dark;
+  }
+
+  code,
+  kbd,
+  samp,
+  pre {
+    font-family: var(--font-geist-mono);
+  }
 }
