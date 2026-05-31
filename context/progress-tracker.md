@@ -4,15 +4,16 @@ Update this file whenever the current phase, active feature, or implementation s
 
 ## Current Phase
 
-- Design System Setup
+- Editor Chrome Complete
 
 ## Current Goal
 
-- Install shadcn/ui, add required UI components, and configure dark theme.
+- Next phase: Build editor canvas and content area for next feature.
 
 ## Completed
 
-- Design System: Installed shadcn/ui and required dependencies. Added all 7 UI components (Button, Card, Dialog, Input, Tabs, Textarea, ScrollArea) with full dark theme support. Created lib/utils.ts with cn() helper. Configured globals.css with dark theme CSS custom properties and typography. All components use theme tokens with no light mode styling.
+- Design System: Updated to Base UI components with custom design tokens. Configured globals.css with dark-only theme using CSS custom properties (--color-bg-base, --color-text-primary, --color-accent-primary, etc.). Updated tailwind.config.ts to map design tokens to Tailwind utilities (bg-base, text-primary, border-default, etc.). All 7 UI components (Button, Card, Dialog, Input, Tabs, Textarea, ScrollArea) use dark theme with no light mode. Typography configured with Geist Sans and Mono fonts.
+- Editor Chrome: Created EditorNavbar component (fixed-height navbar with sidebar toggle using PanelLeftOpen/PanelRightClose icons, left/center/right sections). Created ProjectSidebar component (floating overlay from left with tabs for My Projects/Shared, empty placeholder states, and New Project button). Created DialogPattern component for reusable dialogs with title, description, and footer actions. Updated all components to follow new design system tokens and Base UI component structure.
 
 ## In Progress
 
